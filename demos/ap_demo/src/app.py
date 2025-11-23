@@ -348,6 +348,7 @@ class App:
         if f:
             self.config = json.loads(f.read())
             f.close()
+            print(f"DEBUG: Loaded mqtt_rpc_response_topic: {self.config.get('mqtt_rpc_response_topic', 'NOT_SET')}")
         else:
             # Set default config values
             device_id = binascii.hexlify(self.sta.get_mac()).decode()
@@ -504,8 +505,13 @@ class App:
                     self.publish_btn_led()
                 if(msg.startswith(b'{"method":"startBleScan"')):
                     self.do_ble_scan = True
-                # Send a response                
-                self.mqtt.publish(self.config['mqtt_rpc_response_topic'] + '/' + topic.decode().split('/')[-1], msg)
+                # Send a response
+                request_id = topic.decode().split('/')[-1]
+                response_topic = self.config['mqtt_rpc_response_topic'] + '/' + request_id
+                print(f"DEBUG: Incoming topic: {topic.decode()}")
+                print(f"DEBUG: Request ID: {request_id}")
+                print(f"DEBUG: Response topic: {response_topic}")
+                self.mqtt.publish(response_topic, msg)
 
     def mqtt_do_ping(self):
         if self.mqtt is not None:
