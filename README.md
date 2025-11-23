@@ -5,9 +5,12 @@ It includes enhancements and ready-to-run demos that extend the original snippet
 
 #### ✨ Notable Updates
 - Added **SNTP**, **HTTP** and **MQTT client** examples with expanded functionality  
-- Integrated existing snippets into **ready-to-run demos**  
+- Integrated existing snippets into **ready-to-run demos**
 
 These updates aim to provide a **plug-and-play demo experience**, allowing developers to evaluate hardware capabilities quickly and efficiently.
+
+> **For details, refer to commit**  
+> [`a40a448f8a3204dd0868c889131e334d37ce4724`](https://github.com/vascode2/canvas_python_samples_edited/commit/a40a448f8a3204dd0868c889131e334d37ce4724)
 
 ---
 
