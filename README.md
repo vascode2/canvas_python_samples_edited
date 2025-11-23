@@ -1,3 +1,16 @@
+### Modified Version from Ezurio repo
+
+This repository is a **modified version of Ezurio’s official Canvas Python Samples**, customized by vascode2.  
+It includes enhancements and ready-to-run demos that extend the original snippets provided by Ezurio’s engineering team.
+
+#### ✨ Notable Updates
+- Added **SNTP**, **HTTP** and **MQTT client** examples with expanded functionality  
+- Integrated existing snippets into **ready-to-run demos**  
+
+These updates aim to provide a **plug-and-play demo experience**, allowing developers to evaluate hardware capabilities quickly and efficiently.
+
+---
+
 # ![Canvas Logo](starter_projects/resources/img/canvas_logo.png)
 
 ### Python Application Development for Embedded Wireless Products
